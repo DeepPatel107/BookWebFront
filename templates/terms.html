@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/help.css')}}">
+</head>
+<body>
+    <div class="nav">    
+  
+        <span id="contact"> <button type="submit" class="btn"><a href="{{ url_for('contact') }}">Contact Us</a></button></span>
+        <span id="help"> <button type="submit" class="btn"><a href="{{ url_for('help') }}">Help</a></button></span>
+        <span id="about"> <button type="submit" class="btn"><a href="{{ url_for('about') }}">About Us</a></button></span>
+        <span id="terms"> <button type="submit" class="btn"><a href="{{ url_for('terms') }}">Terms and Conditions</a></button></span>
+        <span id="homepage"> <button type="submit" class="btn"><a href="{{ url_for('index') }}">Home</a></button></span>
+    </div>
+
+    <div class="container" id="term">
+        <h1>Terms and Conditions</h1>
+        <p>Last Updated: October 17, 2024</p>
+
+        <h2>1. Introduction</h2>
+        <p>
+            Welcome to [Your Library's Name]. By accessing or using our website, you agree to comply with and be bound by the following terms and conditions. Please read these terms carefully before using the website.
+        </p>
+
+        <h2>2. Intellectual Property Rights</h2>
+        <p>
+            Unless otherwise stated, [Your Library's Name] and/or its licensors own the intellectual property rights in the website and all material on the website. All intellectual property rights are reserved.
+        </p>
+
+        <h2>3. User Obligations</h2>
+        <p>
+            As a user of this website, you agree to use it for lawful purposes only. You must not engage in any activity that causes damage to the website or interferes with other users' access or use of the website.
+        </p>
+
+        <h2>4. Limitation of Liability</h2>
+        <p>
+            We are not liable for any damages that may arise from the use of our website. We do not guarantee that the site will be available at all times or free from errors or harmful components.
+        </p>
+
+        <h2>5. Governing Law</h2>
+        <p>
+            These terms are governed by and construed in accordance with the laws of [Your Country/State], and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
+        </p>
+
+        <h2>6. Changes to Terms</h2>
+        <p>
+            We reserve the right to make changes to these terms at any time. Your continued use of the website following any updates indicates acceptance of the modified terms.
+        </p>
+
+        <h2>7. Contact Us</h2>
+        <p>
+            If you have any questions or concerns about these terms, please contact us at [your email address or contact details].
+        </p>
+    </div>
+        
+
+
+</body>
+</html>

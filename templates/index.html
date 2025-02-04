@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Recommender System</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <span id="logo"> <a href="{{ url_for('index') }}"><img src="{{ url_for('static', filename='Images/logo.png') }}" alt=""></a></span>
+    <span id="login"> <button type="submit" class="btn"><a href="{{ url_for('login') }}">Login</a></button></span>
+    <span id="create"> <button type="submit" class="btn"><a href="{{ url_for('createAcc') }}">Create Account</a></button></span>
+
+        <form action="/recommend_books" method="POST" id="issueForm">
+            <div class="form-group">
+                <input type="text" name="user_input" id="bookName" class="form-control" placeholder="Enter book name" required>
+                <button type="submit" class="btn">Search</button>
+                <button type="submit" class="btn" id="filter"><a href="{{ url_for('recommend') }}">Filter</a></button>
+            </div>
+        </form>
+
+        <div class="libraries">
+            <label>Select Library</label>
+            <ul id="libsec">
+                <li onclick="highlightLibrary(this)">
+                    <p>VNIT Library, Bajaj Nagar :<br> 8 AM to 9 PM </p>
+                </li>
+                <li onclick="highlightLibrary(this)">
+                    <p>Newton Library, Mihar :<br> 8 AM to 12 PM </p>
+                </li>
+                <li onclick="highlightLibrary(this)">
+                    <p>AIIMS Library, Nagpur :<br> 10 AM to 8 PM</p>
+                </li>
+                <li onclick="highlightLibrary(this)">
+                    <p>Central Nagpur Library : <br> 9 AM to 6 PM</p>
+                </li>
+                <li onclick="highlightLibrary(this)">
+                    <p>Raisoni Library : <br> 10 AM to 8 PM</p>
+                </li>
+                <li onclick="highlightLibrary(this)">
+                    <p>IIIT Nagpur Library :<br> 7 AM to 9 PM </p>
+                </li>
+                <li onclick="highlightLibrary(this)">
+                    <p>ApJ Abdul Kalam Library :<br> 24 x 7</p>
+                </li>
+            </ul>
+        </div>
+
+            {% if data %}
+                <div class="Recom">
+                    <label>Here's What You Searched</label>
+                <div class="Samples">
+                    {% for i in data %}
+                        <a href="{{i[2]}}" class="book">
+                            <img src="{{i[2]}}" alt="">
+                        </a>
+                    {% endfor %}
+                </div>
+                </div>
+
+            {% else %}
+            <div class="Recom">
+                <label>Recommended</label>
+                <div class="Samples">
+                    <a href="{{ url_for('book1') }}" id="second" class="book">
+                        <img src="{{ url_for('static', filename='Images/book1.png') }}" alt="">
+                    </a>
+                    <a href="book1.html" id="third" class="book">
+                        <img src="{{ url_for('static', filename='Images/book2.png') }}" alt="">
+                    </a>
+                    <a href="book1.html" id="fourth" class="book">
+                        <img src="{{ url_for('static', filename='Images/book3.png') }}" alt="">
+                    </a>
+                    <a href="book1.html" id="fifth" class="book">
+                        <img src="{{ url_for('static', filename='Images/book4.png') }}" alt="">
+                    </a>
+                    <a href="book1.html" id="sixth" class="book">
+                        <img src="{{ url_for('static', filename='Images/book5.webp') }}" alt="">
+                    </a>
+                    <a href="book1.html" id="sixth" class="book">
+                        <img src="{{ url_for('static', filename='Images/book6.jpg') }}" alt="">
+                    </a>
+                    <a href="book1.html" id="sixth" class="book">
+                        <img src="{{ url_for('static', filename='Images/book10.webp') }}" alt="">
+                    </a>
+                    <a href="book1.html" id="sixth" class="book">
+                        <img src="{{ url_for('static', filename='Images/book14.webp') }}" alt="">
+                    </a>
+                    <a href="book1.html" id="sixth" class="book">
+                        <img src="{{ url_for('static', filename='Images/book15.webp') }}" alt="">
+                    </a>
+                    <a href="book1.html" id="sixth" class="book">
+                        <img src="{{ url_for('static', filename='Images/book16.webp') }}" alt="">
+                    </a>
+                    <a href="book1.html" id="sixth" class="book">
+                        <img src="book17.webp" alt="">
+                    </a>
+                    <a href="book1.html" id="sixth" class="book">
+                        <img src="book24.webp" alt="">
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if data %}
+            <div class="mostView">
+                <label>More Books by the Author</label>
+                <div class="Samples">
+                    {% for i in other_books %}
+                        <a href="{{i[2]}}" class="book">
+                            <img src="{{i}}" alt="">
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            {% else %}
+            <div class="mostView">
+                <label>Most Viewed</label>
+                <div class="Samples">
+                    {% for i in range(book_name|length) %}
+                        <a href="book1.html" id="second" class="book">
+                        <img src="{{image[i]}}" alt="">
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            <div class="help">
+                <ul id="helpsec">
+                    <li>
+                        <a href="{{ url_for('contact') }}">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('help') }}">Help</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('about') }}">About us</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('terms') }}">Terms and Conditions</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+<style>
+    /* Default Style */
+    #libsec li {
+        cursor: pointer;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 5px;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    /* Highlighted Library */
+    #libsec li.selected {
+        background-color: #9a7362;
+        color: white;
+        font-weight: bold;
+        border: 2px solid #9a7362;
+    }
+</style>
+
+<script>
+    function highlightLibrary(selectedLi) {
+        // Remove 'selected' class from all list items
+        document.querySelectorAll("#libsec li").forEach(li => li.classList.remove("selected"));
+
+        // Add 'selected' class to the clicked list item
+        selectedLi.classList.add("selected");
+    }
+</script>
+</html>

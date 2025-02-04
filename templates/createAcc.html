@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/stylelogin.css')}}">
+</head>
+<body>
+    <span id="homepage"> <button type="submit" class="btn"><a href="{{ url_for('index') }}">Home</a></button></span>
+    <span id="login"> <button type="submit" class="btn"><a href="{{ url_for('login') }}">Login</a></button></span>
+    <div class="login-container">
+        <h2>Account Details</h2>
+        <form action="/submit-login" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="username">Email id:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="username">Mobile number:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+
+</body>
+</html>

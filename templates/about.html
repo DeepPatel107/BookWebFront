@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/help.css')}}">
+</head>
+<body>
+    <div class="nav">    
+  
+        <span id="contact"> <button type="submit" class="btn"><a href="{{ url_for('contact') }}">Contact Us</a></button></span>
+        <span id="help"> <button type="submit" class="btn"><a href="{{ url_for('help') }}">Help</a></button></span>
+        <span id="about"> <button type="submit" class="btn"><a href="{{ url_for('about') }}">About Us</a></button></span>
+        <span id="terms"> <button type="submit" class="btn"><a href="{{ url_for('terms') }}">Terms and Conditions</a></button></span>
+        <span id="homepage"> <button type="submit" class="btn"><a href="{{ url_for('index') }}">Home</a></button></span>
+    </div>
+
+    <div class="container">
+        <h1>About Our Library</h1>
+        <p>
+            Welcome to our library! Our mission is to inspire and cultivate a love for reading, learning, and community growth. Since our founding in 1990, we have provided readers and researchers access to a diverse collection of books, resources, and programs.
+        </p>
+        <p>
+            We believe in creating a space where individuals can explore knowledge, ideas, and imagination. Our team of librarians and volunteers work tirelessly to make sure we provide an inclusive and enriching experience for all visitors.
+        </p>
+
+        <div class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="mem1.webp" alt="John Doe">
+                    <h3>Robert Downey Jr</h3>
+                    <p>Head Librarian</p>
+                </div>
+                <div class="team-member">
+                    <img src="mem2.webp" alt="Jane Smith">
+                    <h3>Chris Evans</h3>
+                    <p>Assistant Librarian</p>
+                </div>
+                <div class="team-member">
+                    <img src="mem3.webp" alt="Alice Johnson">
+                    <h3>Chris Hemsworth</h3>
+                    <p>Community Outreach <br>Coordinator</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+
+
+</body>
+</html>

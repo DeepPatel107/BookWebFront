@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/help.css')}}">
+</head>
+<body>
+    <div class="nav">    
+  
+        <span id="contact"> <button type="submit" class="btn"><a href="{{ url_for('contact') }}">Contact Us</a></button></span>
+        <span id="help"> <button type="submit" class="btn"><a href="{{ url_for('help') }}">Help</a></button></span>
+        <span id="about"> <button type="submit" class="btn"><a href="{{ url_for('about') }}">About Us</a></button></span>
+        <span id="terms"> <button type="submit" class="btn"><a href="{{ url_for('terms') }}">Terms and Conditions</a></button></span>
+        <span id="homepage"> <button type="submit" class="btn"><a href="{{ url_for('index') }}">Home</a></button></span>
+    </div>
+
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="contact">
+                <form id="issueForm">
+                    <label for="bookName">Email Id :</label>
+                    <input type="text" id="bookName" required>
+        
+                    <label for="authorName">Name :</label>
+                    <input type="text" id="authorName" required>
+        
+                    <label for="issueDate">Query:</label>
+                    <input type="text" id="issueDate" required>
+        
+                    <button type="submit" id="sub">Submit</button>
+                </form>
+        </div>
+        </div>
+
+
+</body>
+</html>

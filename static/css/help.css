@@ -1,0 +1,152 @@
+body {
+    font-family:cursive;
+    background-image: url('/static/Images/bgc5.jpg'); /* Add your image here */
+    background-size: cover; /* Ensure the image covers the whole page */
+    background-position: center; /* Center the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+a{
+    font-family: cursive;
+    text-decoration: none;
+    color: white;
+}
+
+button.btn {
+    padding: 7px;
+    background-color: #9a7362;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #9a7362;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: cursive;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+button:hover {
+    background-color: #66413f;
+}
+
+.nav{
+    position: absolute;
+    top: 3%;
+    width: 80%;
+    max-width: 900px;
+
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 12px 10px 12px;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+}
+
+.container{
+    position: absolute;
+    top: 18%;
+    width: 80%;
+    max-width: 900px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 12px 10px 12px;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+    flex-direction: column;
+}
+
+.help-section{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.help-section ul{
+    list-style: none;
+    
+}
+
+.help-section li {
+    background-color: white;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin: 5px;
+}
+.help-section li a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: left;
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+label{
+    padding: 10px;
+}
+
+#sub{
+    margin-top: 15px;
+}
+
+.team-members{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.team-members img{
+    width: 140px;
+    border-radius: 10px;
+
+}
+
+.team-member{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#term h1{
+    margin-block-start: 0.5em;
+    margin-block-end: 0.1em;
+}
+
+#term h2{
+    margin-block-start: 0.5em;
+    margin-block-end: 0em;
+}

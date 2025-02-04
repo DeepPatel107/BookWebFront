@@ -1,0 +1,72 @@
+#bookimg{
+    width: 60%;
+    max-width: 350px;
+    padding: 10px;
+    height: 40%;
+}
+
+#bookblock{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.info{
+    text-align: center;
+    padding-right: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#issue{
+    width: 30%;
+    min-width: 200px;
+    margin-top: 10px;
+
+}
+
+.iss{
+    width: 70%;
+    max-width: 200px;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    margin: 5px;
+    padding: 10px;
+}
+
+.order{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent to make text readable over background */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom:20px;
+    right: 15px;
+    width: 33%;
+    text-align: center;
+    padding: 10px;
+}
+
+.order input{
+    border-radius: 2px;
+    border: none;
+    margin: 2px;
+    text-align: center;
+    height: 25px;
+}
+
+#ord{
+    padding: 2px;
+    border-radius: 4px;
+    font-size: 15px;
+   margin-bottom: 4px;
+   margin-left: 80px;
+}

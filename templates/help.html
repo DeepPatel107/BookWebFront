@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/help.css')}}">
+</head>
+<body>
+    <div class="nav">    
+  
+        <span id="contact"> <button type="submit" class="btn"><a href="{{ url_for('contact') }}">Contact Us</a></button></span>
+        <span id="help"> <button type="submit" class="btn"><a href="{{ url_for('help') }}">Help</a></button></span>
+        <span id="about"> <button type="submit" class="btn"><a href="{{ url_for('about') }}">About Us</a></button></span>
+        <span id="terms"> <button type="submit" class="btn"><a href="{{ url_for('terms') }}">Terms and Conditions</a></button></span>
+        <span id="homepage"> <button type="submit" class="btn"><a href="{{ url_for('index') }}">Home</a></button></span>
+    </div>
+    <div class="container">
+        <h1>Help Center</h1>
+        <h2>Frequently Asked Questions (FAQs)</h2>
+    <div class="help-section">
+        <ul>
+            <li><strong>How do I create an account?</strong>
+                <p>To create an account, click on the "Sign Up" button at the top-right of the page and follow the instructions.</p>
+            </li>
+            <li><strong>What should I do if I forget my password?</strong>
+                <p>Click on "Forgot Password" on the login page, and you’ll be able to reset it via your email address.</p>
+            </li>
+            <li><strong>How can I contact support?</strong>
+                <p>You can contact support by filling out the contact form on our Contact Us page or by emailing support@yourwebsite.com.</p>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+</body>
+</html>
